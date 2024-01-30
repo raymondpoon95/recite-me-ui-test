@@ -1,0 +1,9 @@
+import { render, screen } from "@testing-library/react";
+import App from "./App";
+
+describe("first test", () => {
+  test("app", () => {
+    render(<App />);
+    expect(screen.getByText("Hello world")).toBeInTheDocument();
+  });
+});
