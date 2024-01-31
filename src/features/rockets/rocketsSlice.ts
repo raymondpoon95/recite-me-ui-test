@@ -4,7 +4,7 @@ import { RocketType } from "../../types/types";
 
 const BASE_URL = import.meta.env.VITE_APP_BASE_API_URL;
 
-interface RocketState {
+export interface RocketState {
   loading: boolean;
   rockets: RocketType[];
   errorMessage: string;
