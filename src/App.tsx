@@ -1,7 +1,20 @@
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/home/Home";
+import Crew from "./pages/crew/Crew";
+import Rocket from "./pages/rocket/Rocket";
+
 function App() {
   return (
     <>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/crew" element={<Crew />}>
+          <Route path="/crew:id" element={<Crew />} />
+        </Route>
+        <Route path="/rocket" element={<Rocket />}>
+          <Route path="/rocket:id" element={<Rocket />} />
+        </Route>
+      </Routes>
     </>
   );
 }
